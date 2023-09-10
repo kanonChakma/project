@@ -1,5 +1,6 @@
 import Product from "../models/Product.js"
 import ProductStat from "../models/ProductStat.js"
+import User from "../models/User.js"
 
 export const getProduct = async(req, res) => {
   try {
@@ -15,11 +16,41 @@ export const getProduct = async(req, res) => {
         }
       })
     )
-    console.log(productsWithStats)
     res.status(200).json(productsWithStats)
 
 } catch (error) {
-  console.log(error)
    res.status(400).json({message: error.message})   
   }
 }
+
+
+export const getCustomers = async(req, res) => {
+ try {
+   const customers = await User.find({role: "user"}).select("-password")
+   res.status(200).json(customers)
+ } catch (error) {
+  res.status(400).json({message: error.message})   
+ }
+} 
+
+
+export const getTransactions = async(req, res) => {
+  try {
+    //const transactions = Transaction.find()
+
+  } catch (error) {
+    res.status(400).json({message: error.message})
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
