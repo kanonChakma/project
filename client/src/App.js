@@ -5,11 +5,12 @@ import { useSelector } from 'react-redux';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Customers from 'scenes/customers';
 import Dashboard from 'scenes/dashboard';
+import Geography from "scenes/geography";
 import LayOut from 'scenes/layout';
+import OverView from 'scenes/overview';
 import Products from 'scenes/products';
 import Transactions from "scenes/transactions";
 import { themeSettings } from 'theme';
-
 
 const App = () => {
   const mode = useSelector((state) => state.global.mode)
@@ -27,6 +28,8 @@ const App = () => {
             <Route path="/products" element={<Products />} />
             <Route path="/customers" element={<Customers />} />
             <Route path="/transactions" element={<Transactions />} />
+            <Route path="/geography" element={<Geography />} />  
+            <Route path="/overview" element={<OverView />} />
           </Route>
          </Routes>
        </ThemeProvider>

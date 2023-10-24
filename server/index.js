@@ -38,6 +38,10 @@ mongoose
     //User.insertMany(dataUser)
     // Product.insertMany(dataProduct)
     // ProductStat.insertMany(dataProductStat)
+    //Transaction.insertMany(dataTransaction);
+    //OverallStat.insertMany(dataOverallStat)
   })
   .catch((error) => console.log(`${error} did not connect`));
   
+  // trainyourmindhedebeda2323ed
+  // trainyourmindhedebeda2323edk
