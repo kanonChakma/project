@@ -42,6 +42,3 @@ mongoose
     //OverallStat.insertMany(dataOverallStat)
   })
   .catch((error) => console.log(`${error} did not connect`));
-  
-  // trainyourmindhedebeda2323ed
-  // trainyourmindhedebeda2323edk
